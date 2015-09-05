@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>DocBuddy - Repair Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js"></script>
+    <script src="jquery.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        
+        <header><img src="images/DocBuddy.jpg" alt="DocBuddy Computer Documentation and Billing"/>  </header>
+        <div class="docbuddy">
+            
+            <form action="newcli.php" method="post">
+                
+                <fieldset class="clientinfo">
+                    <legend>Client Information</legend>
+                    <label>First Name: <br><input type="text" name="firstname"><br></label>
+                    <label>Last Name:<br><input type="text" name="lastname"><br></label>
+                    <label>Phone Number: <br> <input type="text" name="phone"><br> </label>
+                </fieldset> 
+                <fieldset class="unitinfo">
+                    <legend>Unit Information</legend>
+                    <label>Make:<br> <input type="text" name="make"><br></label>
+                    <label>Model:<br> <input type="text" name="model"><br></label>
+                        <p>Parts with Unit:
+                    <input type="checkbox" name="parts[]" value="battery"> Battery
+                    <input type="checkbox" name="parts[]" value="indrive"> CD/DVD in drive
+                    <input type="checkbox" name="parts[]" value="acpower"> Charger
+                    <input type="checkbox" name="parts[]" value="cleanlabel"> Clean Windows Label
+                    <input type="checkbox" name="parts[]" value="dock"> Dock 
+                    <input type="checkbox" name="parts[]" value="cd-dvddrive"> Optical Drive (CD/DVD)         
+                        </p>
+                </fieldset>
+                <fieldset class="problem">
+                    <legend>Problem Description</legend>
+                    <textarea class="problem" name="problem" cols="50" rows="10"></textarea>
+                </fieldset>
+                
+                <button type="submit" class="submit">Complete Entry</button>
+            </form>
+        </div>        
+    </div>
+</body>
+</html>
